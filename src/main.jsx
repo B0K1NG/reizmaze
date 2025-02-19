@@ -6,17 +6,30 @@ import './styles/style.css'
 
 import App from './App.jsx'
 import NotFoundPage from './components/NotFoundPage.jsx'
+import ShowDetail from './components/ShowDetail'
+import FavoritesPage from './components/FavoritesPage'
+import { FavoritesProvider } from './context/FavoritesContext'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <NotFoundPage />,
-  }
+  },
+  {
+    path: '/show/:id',
+    element: <ShowDetail />,
+  },
+  {
+    path: '/favorites',
+    element: <FavoritesPage/>,
+  },
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FavoritesProvider>
+      <RouterProvider router={router} />
+    </FavoritesProvider>
   </StrictMode>,
 )
