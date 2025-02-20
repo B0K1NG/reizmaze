@@ -29,6 +29,7 @@ const ShowCard = ({ show, onFavoriteChange }) => {
                 <h3>{show.name}</h3>
                 <div dangerouslySetInnerHTML={{ __html: show.summary?.substring(0, 100) + '...' }}></div>
                 <p>Rating: {show.rating?.average} / 10</p>
+                <p>Genres: {show.genres?.join(", ")}</p>
             </Link>
             <button onClick={toggleFavorite}>
                 {isFavorited ? 'Unfavorite' : 'Add to Favorites'}
