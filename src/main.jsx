@@ -10,6 +10,7 @@ import ShowDetail from './components/ShowDetail';
 import FavoritesPage from './components/FavoritesPage';
 import Layout from './components/Layout.jsx';
 
+import { ThemeProvider } from './context/ThemeContext.jsx';
 import { FavoritesProvider } from './context/FavoritesContext';
 
 const router = createBrowserRouter([
@@ -30,8 +31,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FavoritesProvider>
-      <RouterProvider router={router} />
-    </FavoritesProvider>
+    <ThemeProvider>
+      <FavoritesProvider>
+        <RouterProvider router={router} />
+      </FavoritesProvider>
+    </ThemeProvider>
   </StrictMode>,
 )
