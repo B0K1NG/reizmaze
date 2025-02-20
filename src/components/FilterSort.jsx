@@ -50,10 +50,12 @@ const FilterSort = ({ setFilters, setSort }) => {
 
   const handleSortChange = selected => {
     setSelectedSort(selected);
-    if (selected.value.includes('name')) {
+    if (selected?.value.includes('name')) {
       setSort({ field: 'name', order: selected.value.includes('asc') ? 'asc' : 'desc' });
-    } else if (selected.value.includes('premiered')) {
+    } else if (selected?.value.includes('premiered')) {
       setSort({ field: 'premiered', order: selected.value.includes('asc') ? 'asc' : 'desc' });
+    } else {
+      setSort({field: '', order: ''});
     }
   };
 
@@ -82,20 +84,28 @@ const FilterSort = ({ setFilters, setSort }) => {
     </components.Control>
   );
 
+  const NoIndicator = () => null;
+  const NoSeparator = () => null;
+  const NoClear = () => null;
+
   return (
-    <div className={'filter-sort'}>
+    <div className='filter-sort'>
       <Select
-        className="sort-select"
+        className={`sort-select ${selectedSort ? 'has-value' : ''}`}
         classNamePrefix="sort"
         options={sortOptions}
         value={selectedSort}
         onChange={handleSortChange}
         placeholder='No sort'
         isSearchable={false}
+        components={{
+          DropdownIndicator: NoIndicator,
+          IndicatorSeparator: NoSeparator,
+        }}
       />
 
       <Select
-        className="genres-select"
+        className={`genres-select ${selectedGenres.length > 0 ? 'has-value' : ''}`}
         classNamePrefix="genres"
         options={genreOptions}
         isMulti
@@ -104,7 +114,10 @@ const FilterSort = ({ setFilters, setSort }) => {
         components={{ 
           Option: CheckboxOption,
           MultiValue: GenresMultiValue,
-          Control: GenresControl
+          Control: GenresControl,
+          DropdownIndicator: NoIndicator,
+          IndicatorSeparator: NoSeparator,
+          ClearIndicator: NoClear,
         }}
         placeholder=''
         closeMenuOnSelect={false}
@@ -113,12 +126,17 @@ const FilterSort = ({ setFilters, setSort }) => {
       />
 
       <Select
-        className="status-select"
+        className={`status-select ${selectedStatus ? 'has-value' : ''}`}
         classNamePrefix="status"
         options={statusOptions}
         value={selectedStatus}
         onChange={handleStatusChange}
-        components={{ Option: RadioOption, SingleValue: StatusSingleValue }}
+        components={{ 
+          Option: RadioOption, 
+          SingleValue: StatusSingleValue,
+          DropdownIndicator: NoIndicator,
+          IndicatorSeparator: NoSeparator
+        }}
         placeholder='Status filter'
         isSearchable={false}
       />
