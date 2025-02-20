@@ -1,6 +1,6 @@
 import React from 'react';
 import { components } from 'react-select';
-import '../styles/components/_checkbox.scss';
+
 
 const CheckboxOption = (props) => {
     return (

@@ -85,13 +85,18 @@ const FilterSort = ({ setFilters, setSort }) => {
   return (
     <div className={'filter-sort'}>
       <Select
+        className="sort-select"
+        classNamePrefix="sort"
         options={sortOptions}
         value={selectedSort}
         onChange={handleSortChange}
         placeholder='No sort'
         isSearchable={false}
       />
+
       <Select
+        className="genres-select"
+        classNamePrefix="genres"
         options={genreOptions}
         isMulti
         value={selectedGenres}
@@ -106,7 +111,10 @@ const FilterSort = ({ setFilters, setSort }) => {
         hideSelectedOptions={false}
         isSearchable={false}
       />
+
       <Select
+        className="status-select"
+        classNamePrefix="status"
         options={statusOptions}
         value={selectedStatus}
         onChange={handleStatusChange}

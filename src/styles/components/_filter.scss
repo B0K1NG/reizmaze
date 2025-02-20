@@ -1,0 +1,244 @@
+@import '../utilities/variables';
+
+.filter-sort {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  > div {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+.sort-select {
+  .sort__control {
+    background-color: $light-bg;
+    border: 1px solid darken($light-bg, 20%);
+  }
+
+  .sort__menu {
+    background-color: $light-bg;
+  }
+
+  .sort__option {
+    background-color: $light-bg;
+    color: $light-txt;
+
+    &:hover {
+      background-color: darken($light-bg, 10%);
+    }
+
+    &.sort__option--is-selected {
+      background-color: darken($light-bg, 15%);
+    }
+  }
+
+  .sort__placeholder {
+    color: $light-txt;
+  }
+
+  .sort__single-value {
+    color: $light-txt;
+  }
+}
+
+.genres-select {
+  .genres__control {
+    position: relative;
+    background-color: $light-bg;
+    border: 1px solid darken($light-bg, 20%);
+  }
+
+  .genres {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: none;
+    color: $light-txt;
+  }
+
+  .genres__menu {
+    background-color: $light-bg;
+  }
+
+  .genres__option {
+    background-color: $light-bg;
+    color: $light-txt;
+
+    &:hover {
+      background-color: darken($light-bg, 10%);
+    }
+
+    &.genres__option--is-selected {
+      background-color: darken($light-bg, 15%);
+    }
+  }
+
+  .genres__placeholder {
+    color: $light-txt;
+  }
+
+  .genres__multi-value {
+    background-color: darken($light-bg, 10%);
+    color: $light-txt;
+  }
+
+  .genres__multi-value__label {
+    color: $light-txt;
+  }
+}
+
+
+.status-select {
+  .status__control {
+    background-color: $light-bg;
+    border: 1px solid darken($light-bg, 20%);
+  }
+
+  .status__menu {
+    background-color: $light-bg;
+  }
+
+  .status__option {
+    background-color: $light-bg;
+    color: $light-txt;
+
+    &:hover {
+      background-color: darken($light-bg, 10%);
+    }
+
+    &.status__option--is-selected {
+      background-color: darken($light-bg, 15%);
+    }
+  }
+
+  .status__placeholder {
+    color: $light-txt;
+  }
+
+  .status__single-value {
+    color: $light-txt;
+  }
+}
+
+.dark-theme {
+  .sort-select,
+  .genres-select,
+  .status-select {
+    .sort__control,
+    .genres__control,
+    .status__control {
+      background-color: $dark-bg !important;
+      border-color: lighten($dark-bg, 20%) !important;
+    }
+
+    .sort__menu,
+    .genres__menu,
+    .status__menu {
+      background-color: $dark-bg !important;
+    }
+
+    .sort__option,
+    .genres__option,
+    .status__option {
+      background-color: $dark-bg !important;
+      color: $dark-txt !important;
+
+      &:hover {
+        background-color: lighten($dark-bg, 10%) !important;
+      }
+
+      &.sort__option--is-selected,
+      &.genres__option--is-selected,
+      &.status__option--is-selected {
+        background-color: lighten($dark-bg, 15%) !important;
+      }
+    }
+
+    .sort__placeholder,
+    .genres__placeholder,
+    .status__placeholder,
+    .sort__single-value,
+    .status__single-value,
+    .genres__multi-value,
+    .genres__multi-value__label {
+      color: $dark-txt !important;
+    }
+
+    .genres {
+      color: $dark-txt;
+    }
+  }
+}
+
+
+.light-theme {
+  .sort-select,
+  .genres-select,
+  .status-select {
+    .sort__control,
+    .genres__control,
+    .status__control {
+      background-color: $light-bg !important;
+      border-color: darken($light-bg, 20%) !important;
+    }
+
+    .sort__menu,
+    .genres__menu,
+    .status__menu {
+      background-color: $light-bg !important;
+    }
+
+    .sort__option,
+    .genres__option,
+    .status__option {
+      background-color: $light-bg !important;
+      color: $light-txt !important;
+
+      &:hover {
+        background-color: darken($light-bg, 10%) !important;
+      }
+
+      &.sort__option--is-selected,
+      &.genres__option--is-selected,
+      &.status__option--is-selected {
+        background-color: darken($light-bg, 15%) !important;
+      }
+    }
+
+    .sort__placeholder,
+    .genres__placeholder,
+    .status__placeholder,
+    .sort__single-value,
+    .status__single-value,
+    .genres__multi-value,
+    .genres__multi-value__label {
+      color: $light-txt !important;
+    }
+
+    .genres {
+      color: $light-txt;
+    }
+  }
+}
+
+
+.checkbox-option, 
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 0;
+  }
+
+  label {
+    margin: 0;
+  }
+}

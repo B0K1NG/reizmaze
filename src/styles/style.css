@@ -57,27 +57,320 @@ body.light-theme a {
   cursor: pointer;
 }
 
-.checkbox-option, .radio-option {
-  background-color: transparent !important;
-  color: black !important;
-}
-
-.genres {
-  position: absolute;
-  left: 0;
-  right: 0;
-  text-align: center;
-  pointer-events: none;
-}
-
 .filter-sort {
   display: flex;
   gap: 1rem;
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .filter-sort > div {
   flex: 1;
   min-width: 200px;
+}
+
+.sort-select .sort__control {
+  background-color: #f0f0f0;
+  border: 1px solid #bdbdbd;
+}
+.sort-select .sort__menu {
+  background-color: #f0f0f0;
+}
+.sort-select .sort__option {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.sort-select .sort__option:hover {
+  background-color: #d7d7d7;
+}
+.sort-select .sort__option.sort__option--is-selected {
+  background-color: #cacaca;
+}
+.sort-select .sort__placeholder {
+  color: #333;
+}
+.sort-select .sort__single-value {
+  color: #333;
+}
+
+.genres-select .genres__control {
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #bdbdbd;
+}
+.genres-select .genres {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  color: #333;
+}
+.genres-select .genres__menu {
+  background-color: #f0f0f0;
+}
+.genres-select .genres__option {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.genres-select .genres__option:hover {
+  background-color: #d7d7d7;
+}
+.genres-select .genres__option.genres__option--is-selected {
+  background-color: #cacaca;
+}
+.genres-select .genres__placeholder {
+  color: #333;
+}
+.genres-select .genres__multi-value {
+  background-color: #d7d7d7;
+  color: #333;
+}
+.genres-select .genres__multi-value__label {
+  color: #333;
+}
+
+.status-select .status__control {
+  background-color: #f0f0f0;
+  border: 1px solid #bdbdbd;
+}
+.status-select .status__menu {
+  background-color: #f0f0f0;
+}
+.status-select .status__option {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.status-select .status__option:hover {
+  background-color: #d7d7d7;
+}
+.status-select .status__option.status__option--is-selected {
+  background-color: #cacaca;
+}
+.status-select .status__placeholder {
+  color: #333;
+}
+.status-select .status__single-value {
+  color: #333;
+}
+
+.dark-theme .sort-select .sort__control,
+.dark-theme .sort-select .genres__control,
+.dark-theme .sort-select .status__control,
+.dark-theme .genres-select .sort__control,
+.dark-theme .genres-select .genres__control,
+.dark-theme .genres-select .status__control,
+.dark-theme .status-select .sort__control,
+.dark-theme .status-select .genres__control,
+.dark-theme .status-select .status__control {
+  background-color: #333 !important;
+  border-color: #666666 !important;
+}
+.dark-theme .sort-select .sort__menu,
+.dark-theme .sort-select .genres__menu,
+.dark-theme .sort-select .status__menu,
+.dark-theme .genres-select .sort__menu,
+.dark-theme .genres-select .genres__menu,
+.dark-theme .genres-select .status__menu,
+.dark-theme .status-select .sort__menu,
+.dark-theme .status-select .genres__menu,
+.dark-theme .status-select .status__menu {
+  background-color: #333 !important;
+}
+.dark-theme .sort-select .sort__option,
+.dark-theme .sort-select .genres__option,
+.dark-theme .sort-select .status__option,
+.dark-theme .genres-select .sort__option,
+.dark-theme .genres-select .genres__option,
+.dark-theme .genres-select .status__option,
+.dark-theme .status-select .sort__option,
+.dark-theme .status-select .genres__option,
+.dark-theme .status-select .status__option {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+.dark-theme .sort-select .sort__option:hover,
+.dark-theme .sort-select .genres__option:hover,
+.dark-theme .sort-select .status__option:hover,
+.dark-theme .genres-select .sort__option:hover,
+.dark-theme .genres-select .genres__option:hover,
+.dark-theme .genres-select .status__option:hover,
+.dark-theme .status-select .sort__option:hover,
+.dark-theme .status-select .genres__option:hover,
+.dark-theme .status-select .status__option:hover {
+  background-color: #4d4d4d !important;
+}
+.dark-theme .sort-select .sort__option.sort__option--is-selected, .dark-theme .sort-select .sort__option.genres__option--is-selected, .dark-theme .sort-select .sort__option.status__option--is-selected,
+.dark-theme .sort-select .genres__option.sort__option--is-selected,
+.dark-theme .sort-select .genres__option.genres__option--is-selected,
+.dark-theme .sort-select .genres__option.status__option--is-selected,
+.dark-theme .sort-select .status__option.sort__option--is-selected,
+.dark-theme .sort-select .status__option.genres__option--is-selected,
+.dark-theme .sort-select .status__option.status__option--is-selected,
+.dark-theme .genres-select .sort__option.sort__option--is-selected,
+.dark-theme .genres-select .sort__option.genres__option--is-selected,
+.dark-theme .genres-select .sort__option.status__option--is-selected,
+.dark-theme .genres-select .genres__option.sort__option--is-selected,
+.dark-theme .genres-select .genres__option.genres__option--is-selected,
+.dark-theme .genres-select .genres__option.status__option--is-selected,
+.dark-theme .genres-select .status__option.sort__option--is-selected,
+.dark-theme .genres-select .status__option.genres__option--is-selected,
+.dark-theme .genres-select .status__option.status__option--is-selected,
+.dark-theme .status-select .sort__option.sort__option--is-selected,
+.dark-theme .status-select .sort__option.genres__option--is-selected,
+.dark-theme .status-select .sort__option.status__option--is-selected,
+.dark-theme .status-select .genres__option.sort__option--is-selected,
+.dark-theme .status-select .genres__option.genres__option--is-selected,
+.dark-theme .status-select .genres__option.status__option--is-selected,
+.dark-theme .status-select .status__option.sort__option--is-selected,
+.dark-theme .status-select .status__option.genres__option--is-selected,
+.dark-theme .status-select .status__option.status__option--is-selected {
+  background-color: #595959 !important;
+}
+.dark-theme .sort-select .sort__placeholder,
+.dark-theme .sort-select .genres__placeholder,
+.dark-theme .sort-select .status__placeholder,
+.dark-theme .sort-select .sort__single-value,
+.dark-theme .sort-select .status__single-value,
+.dark-theme .sort-select .genres__multi-value,
+.dark-theme .sort-select .genres__multi-value__label,
+.dark-theme .genres-select .sort__placeholder,
+.dark-theme .genres-select .genres__placeholder,
+.dark-theme .genres-select .status__placeholder,
+.dark-theme .genres-select .sort__single-value,
+.dark-theme .genres-select .status__single-value,
+.dark-theme .genres-select .genres__multi-value,
+.dark-theme .genres-select .genres__multi-value__label,
+.dark-theme .status-select .sort__placeholder,
+.dark-theme .status-select .genres__placeholder,
+.dark-theme .status-select .status__placeholder,
+.dark-theme .status-select .sort__single-value,
+.dark-theme .status-select .status__single-value,
+.dark-theme .status-select .genres__multi-value,
+.dark-theme .status-select .genres__multi-value__label {
+  color: #fff !important;
+}
+.dark-theme .sort-select .genres,
+.dark-theme .genres-select .genres,
+.dark-theme .status-select .genres {
+  color: #fff;
+}
+
+.light-theme .sort-select .sort__control,
+.light-theme .sort-select .genres__control,
+.light-theme .sort-select .status__control,
+.light-theme .genres-select .sort__control,
+.light-theme .genres-select .genres__control,
+.light-theme .genres-select .status__control,
+.light-theme .status-select .sort__control,
+.light-theme .status-select .genres__control,
+.light-theme .status-select .status__control {
+  background-color: #f0f0f0 !important;
+  border-color: #bdbdbd !important;
+}
+.light-theme .sort-select .sort__menu,
+.light-theme .sort-select .genres__menu,
+.light-theme .sort-select .status__menu,
+.light-theme .genres-select .sort__menu,
+.light-theme .genres-select .genres__menu,
+.light-theme .genres-select .status__menu,
+.light-theme .status-select .sort__menu,
+.light-theme .status-select .genres__menu,
+.light-theme .status-select .status__menu {
+  background-color: #f0f0f0 !important;
+}
+.light-theme .sort-select .sort__option,
+.light-theme .sort-select .genres__option,
+.light-theme .sort-select .status__option,
+.light-theme .genres-select .sort__option,
+.light-theme .genres-select .genres__option,
+.light-theme .genres-select .status__option,
+.light-theme .status-select .sort__option,
+.light-theme .status-select .genres__option,
+.light-theme .status-select .status__option {
+  background-color: #f0f0f0 !important;
+  color: #333 !important;
+}
+.light-theme .sort-select .sort__option:hover,
+.light-theme .sort-select .genres__option:hover,
+.light-theme .sort-select .status__option:hover,
+.light-theme .genres-select .sort__option:hover,
+.light-theme .genres-select .genres__option:hover,
+.light-theme .genres-select .status__option:hover,
+.light-theme .status-select .sort__option:hover,
+.light-theme .status-select .genres__option:hover,
+.light-theme .status-select .status__option:hover {
+  background-color: #d7d7d7 !important;
+}
+.light-theme .sort-select .sort__option.sort__option--is-selected, .light-theme .sort-select .sort__option.genres__option--is-selected, .light-theme .sort-select .sort__option.status__option--is-selected,
+.light-theme .sort-select .genres__option.sort__option--is-selected,
+.light-theme .sort-select .genres__option.genres__option--is-selected,
+.light-theme .sort-select .genres__option.status__option--is-selected,
+.light-theme .sort-select .status__option.sort__option--is-selected,
+.light-theme .sort-select .status__option.genres__option--is-selected,
+.light-theme .sort-select .status__option.status__option--is-selected,
+.light-theme .genres-select .sort__option.sort__option--is-selected,
+.light-theme .genres-select .sort__option.genres__option--is-selected,
+.light-theme .genres-select .sort__option.status__option--is-selected,
+.light-theme .genres-select .genres__option.sort__option--is-selected,
+.light-theme .genres-select .genres__option.genres__option--is-selected,
+.light-theme .genres-select .genres__option.status__option--is-selected,
+.light-theme .genres-select .status__option.sort__option--is-selected,
+.light-theme .genres-select .status__option.genres__option--is-selected,
+.light-theme .genres-select .status__option.status__option--is-selected,
+.light-theme .status-select .sort__option.sort__option--is-selected,
+.light-theme .status-select .sort__option.genres__option--is-selected,
+.light-theme .status-select .sort__option.status__option--is-selected,
+.light-theme .status-select .genres__option.sort__option--is-selected,
+.light-theme .status-select .genres__option.genres__option--is-selected,
+.light-theme .status-select .genres__option.status__option--is-selected,
+.light-theme .status-select .status__option.sort__option--is-selected,
+.light-theme .status-select .status__option.genres__option--is-selected,
+.light-theme .status-select .status__option.status__option--is-selected {
+  background-color: #cacaca !important;
+}
+.light-theme .sort-select .sort__placeholder,
+.light-theme .sort-select .genres__placeholder,
+.light-theme .sort-select .status__placeholder,
+.light-theme .sort-select .sort__single-value,
+.light-theme .sort-select .status__single-value,
+.light-theme .sort-select .genres__multi-value,
+.light-theme .sort-select .genres__multi-value__label,
+.light-theme .genres-select .sort__placeholder,
+.light-theme .genres-select .genres__placeholder,
+.light-theme .genres-select .status__placeholder,
+.light-theme .genres-select .sort__single-value,
+.light-theme .genres-select .status__single-value,
+.light-theme .genres-select .genres__multi-value,
+.light-theme .genres-select .genres__multi-value__label,
+.light-theme .status-select .sort__placeholder,
+.light-theme .status-select .genres__placeholder,
+.light-theme .status-select .status__placeholder,
+.light-theme .status-select .sort__single-value,
+.light-theme .status-select .status__single-value,
+.light-theme .status-select .genres__multi-value,
+.light-theme .status-select .genres__multi-value__label {
+  color: #333 !important;
+}
+.light-theme .sort-select .genres,
+.light-theme .genres-select .genres,
+.light-theme .status-select .genres {
+  color: #333;
+}
+
+.checkbox-option,
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.checkbox-option input[type=checkbox],
+.checkbox-option input[type=radio],
+.radio-option input[type=checkbox],
+.radio-option input[type=radio] {
+  margin: 0;
+}
+.checkbox-option label,
+.radio-option label {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
