@@ -1,0 +1,51 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+    }
+  
+    .page-item {
+      margin: 15px 5px;
+      display: flex;
+      align-items: flex-end;
+
+    button {
+        background: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: 1rem;
+        border: 1px solid $light-pagination-btn-bg;
+        border-radius: 15%;
+        background-color: $light-pagination-btn-bg;
+        transition: all 0.3s ease;
+
+      &.active {
+        border: 1px solid $footer-bg !important;
+        background-color: $footer-bg !important;
+      }
+
+      &:hover {
+       background-color: lighten($footer-bg, 20%);
+      }
+
+    }
+  }
+}
+
+.dark-theme .pagination .page-item button {
+    background-color: $dark-pagination-btn-bg;
+    border-color: $dark-pagination-btn-bg;
+    color: white;
+
+    &:hover {
+        background-color: lighten($footer-bg, 20%);
+       }
+}
