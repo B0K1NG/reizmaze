@@ -1,0 +1,41 @@
+@import '../utilities/variables';
+
+.navbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    &.dark-theme {
+      background-color: $dark-bg;
+      color: $dark-txt;
+  
+      a {
+        color: $dark-txt;
+      }
+  
+      button {
+        background: none;
+        border: none;
+        color: $dark-txt;
+        cursor: pointer;
+      }
+    }
+  
+    &.light-theme {
+      background-color: $light-bg;
+      color: $light-txt;
+  
+      a {
+        color: $light-txt;
+      }
+  
+      button {
+        background: none;
+        border: none;
+        color: $light-txt;
+        cursor: pointer;
+      }
+    }
+  
+  }  
