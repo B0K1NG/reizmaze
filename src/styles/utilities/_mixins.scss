@@ -1,2 +1,21 @@
-$bulb-size: 100px;
-$bulb-color: #f1c40f;
+@mixin rounded-control {
+    border-radius: $border-radius !important;
+    min-height: $control-height !important;
+    padding: 0 $padding !important;
+    cursor: pointer;
+    transition: all $transition-speed ease;
+  }
+  
+  @mixin rounded-menu {
+    border-radius: $menu-radius !important;
+    overflow: hidden !important;
+    margin-top: 8px !important;
+  }
+  
+  @mixin center-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: none;
+  }
