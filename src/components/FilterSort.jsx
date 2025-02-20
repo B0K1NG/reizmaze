@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
+import { CheckboxOption, RadioOption } from './OptionComponents';
 
 const FilterSort = ({ setFilters, setSort }) => {
   const [genreOptions, setGenreOptions] = useState([]);
@@ -27,18 +28,15 @@ const FilterSort = ({ setFilters, setSort }) => {
       try {
         const response = await fetch('https://api.tvmaze.com/shows');
         const data = await response.json();
-
         const allGenres = new Set();
         data.forEach(show =>
           show.genres.forEach(genre => allGenres.add(genre))
         );
-
         setGenreOptions([...allGenres].map(genre => ({ value: genre, label: genre })));
       } catch (error) {
         console.error('Error fetching genres:', error);
       }
     };
-
     fetchGenres();
   }, []);
 
@@ -67,26 +65,54 @@ const FilterSort = ({ setFilters, setSort }) => {
     }));
   };
 
+  const StatusSingleValue = ({ children, ...props }) => (
+    <components.SingleValue {...props}>
+      Status filter
+    </components.SingleValue>
+  );
+
+  const GenresMultiValue = () => null;
+
+  const GenresControl = ({ children, ...props }) => (
+    <components.Control {...props}>
+      <span className='genres'>
+        Genres filter ({selectedGenres.length})
+      </span>
+      {children}
+    </components.Control>
+  );
+
   return (
-    <div className='filter-sort'>
+    <div className={'filter-sort'}>
       <Select
         options={sortOptions}
         value={selectedSort}
         onChange={handleSortChange}
         placeholder='No sort'
+        isSearchable={false}
       />
       <Select
         options={genreOptions}
         isMulti
         value={selectedGenres}
         onChange={handleGenreChange}
-        placeholder='Genres filter'
+        components={{ 
+          Option: CheckboxOption,
+          MultiValue: GenresMultiValue,
+          Control: GenresControl
+        }}
+        placeholder=''
+        closeMenuOnSelect={false}
+        hideSelectedOptions={false}
+        isSearchable={false}
       />
       <Select
         options={statusOptions}
         value={selectedStatus}
         onChange={handleStatusChange}
+        components={{ Option: RadioOption, SingleValue: StatusSingleValue }}
         placeholder='Status filter'
+        isSearchable={false}
       />
     </div>
   );
