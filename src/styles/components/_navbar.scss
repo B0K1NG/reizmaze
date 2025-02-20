@@ -5,20 +5,94 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1rem;
+    }
+
+    &__logo {
+      height: 2rem;
+      width: auto;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      
+      &.active {
+        border-bottom: 2px solid currentColor;
+      }
+    }
+
+    // Theme Slider Styles
+    .theme-slider {
+      position: relative;
+      width: $slider-width;
+      height: $slider-height;
+      background-color: $dark-bg;
+      border-radius: $slider-height;
+      cursor: pointer;
+      padding: $slider-padding;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__button {
+        position: absolute;
+        left: $slider-padding;
+        width: $slider-button-size;
+        height: $slider-button-size;
+        border-radius: 50%;
+        background-color: white;
+        transition: transform 0.3s ease;
+        z-index: 2;
+      }
+
+      &__icon {
+        width: $slider-button-size;
+        height: $slider-button-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+
+        img {
+          width: 1rem;
+          height: auto;
+        }
+      }
+
+      &.light {
+        .theme-slider__button {
+          transform: translateX($slider-width - $slider-button-size - ($slider-padding * - 0.2));
+          background-color: $logo-bg;
+        }
+      }
+    }
   
     &.dark-theme {
       background-color: $dark-bg;
       color: $dark-txt;
-  
+    
       a {
         color: $dark-txt;
       }
-  
-      button {
-        background: none;
-        border: none;
-        color: $dark-txt;
-        cursor: pointer;
+
+      .theme-slider {
+        background-color: $dark-bg;
+        border: 1px solid lighten($dark-bg, 20%);
       }
     }
   
@@ -29,13 +103,10 @@
       a {
         color: $light-txt;
       }
-  
-      button {
-        background: none;
-        border: none;
-        color: $light-txt;
-        cursor: pointer;
+
+      .theme-slider {
+        background-color: $light-bg;
+        border: 1px solid darken($light-bg, 10%);
       }
     }
-  
-  }  
+}
