@@ -6,16 +6,16 @@
     transition: all $transition-speed ease;
   }
   
-  @mixin rounded-menu {
-    border-radius: $menu-radius !important;
-    overflow: hidden !important;
-    margin-top: 8px !important;
-  }
-  
-  @mixin center-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-    pointer-events: none;
-  }
+@mixin rounded-menu {
+  border-radius: $menu-radius !important;
+  overflow: hidden !important;
+  margin-top: 8px !important;
+}
+
+@mixin center-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+}
