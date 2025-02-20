@@ -1,3 +1,5 @@
+// Theme variables
+
 $dark-bg: #1C1B22;
 $dark-txt: #fff;
 $light-bg: #f0f0f0;
@@ -7,6 +9,7 @@ $logo-bg: #9C29F2;
 $light-filters-bg: #D3D3D3;
 $dark-filters-bg: #2B2A32;
 
+// Filtering variables
 
 $control-height: 40px;
 $border-radius: 50px;
@@ -14,3 +17,10 @@ $menu-radius: 15px;
 $padding: 15px;
 $arrow-size: 0.8em;
 $transition-speed: 0.2s;
+
+// Theme slider variables
+
+$slider-width: 60px;
+$slider-height: 30px;
+$slider-padding: 3px;
+$slider-button-size: $slider-height - ($slider-padding * 2);
