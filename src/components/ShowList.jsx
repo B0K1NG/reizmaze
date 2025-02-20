@@ -42,19 +42,16 @@ const ShowList = ({ filters, sort }) => {
   useEffect(() => {
     let filtered = [...shows];
 
-    // Apply genre filter
     if (filters.genres && filters.genres.length > 0) {
       filtered = filtered.filter(show =>
         show.genres.some(genre => filters.genres.includes(genre))
       );
     }
 
-    // Apply status filter
     if (filters.status) {
       filtered = filtered.filter(show => show.status === filters.status);
     }
 
-    // Apply sorting
     if (sort.field) {
       filtered.sort((a, b) => {
         if (sort.field === 'name') {
