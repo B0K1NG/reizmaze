@@ -35,7 +35,12 @@ const Pagination = ({ showsPerPage, totalShows, paginate, currentPage }) => {
                         {number === '...' ? (
                             <span>...</span>
                         ) : (
-                            <button onClick={() => paginate(number)}>{number}</button>
+                            <button
+                                className={number === currentPage ? 'active' : ''}
+                                onClick={() => paginate(number)}
+                            >
+                                {number}
+                            </button>
                         )}
                     </li>
                 ))}
