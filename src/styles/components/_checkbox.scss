@@ -1,0 +1,26 @@
+@import '../utilities/variables';
+
+.checkbox-option, .radio-option {
+  background-color: transparent !important;
+  color: black !important;
+}
+
+.genres {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: none;
+}
+
+.filter-sort {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-sort > div {
+    flex: 1;
+    min-width: 200px;
+  }
