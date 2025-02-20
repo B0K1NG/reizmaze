@@ -53,7 +53,7 @@ const ShowDetail = () => {
             <p>Show status: {show.ended ? 'Ended' : 'Ongoing'}</p>
             <p>Language: {show.language}</p>
             <p>Average rating: {show.rating.average}</p>
-            <p>Official site: {show.officialSite && <a href={show.officialSite} target='_blank' rel="noopener noreferrer">Go to official site</a>}</p>
+            <p>Official site: {show.officialSite && <a href={show.officialSite} target='_blank' rel="noopener noreferrer" className="underline-link">Go to official site</a>}</p>
             <p>Genres: {show.genres?.join(", ")}</p>
         </div>
     );
