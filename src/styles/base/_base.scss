@@ -1,4 +1,6 @@
 @import '../utilities/variables';
+@import '../utilities/mixins';
+
 
 body {
     margin: 0;
@@ -28,4 +30,14 @@ body {
 
 .underline-link {
     text-decoration: underline !important;
+}
+
+footer {
+  @include center-content;  
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
