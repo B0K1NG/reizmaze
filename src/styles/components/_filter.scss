@@ -1,21 +1,64 @@
 @import '../utilities/variables';
+@import '../utilities/mixins';
 
 .filter-sort {
   display: flex;
   gap: 1rem;
   align-items: center;
   margin-bottom: 1rem;
+  justify-content: flex-start;
 
   > div {
-    flex: 1;
-    min-width: 200px;
+    flex: 0;
+    min-width: 8.5em;
+    max-width: 14em;
+    
   }
+
+  .sort-select {
+    min-width: 15em;
+    max-width: 20em;
+  }
+}
+
+.sort-select .sort__control,
+.genres-select .genres__control,
+.status-select .status__control {
+  @include rounded-control;
+}
+
+.sort-select .sort__menu,
+.genres-select .genres__menu,
+.status-select .status__menu {
+  @include rounded-menu;
+  width: 200px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin-top: 8px !important;
+  border: 1px solid $dark-bg !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .sort-select {
   .sort__control {
     background-color: $light-bg;
     border: 1px solid darken($light-bg, 20%);
+    position: relative;
+      
+    &::after {
+      content: '▼';
+      position: absolute;
+      right: $padding;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: $arrow-size;
+      pointer-events: none;
+      color: $light-txt;
+    }
+  }
+
+  .sort__value-container {
+    padding-right: $padding * 2 !important;
   }
 
   .sort__menu {
@@ -35,10 +78,7 @@
     }
   }
 
-  .sort__placeholder {
-    color: $light-txt;
-  }
-
+  .sort__placeholder,
   .sort__single-value {
     color: $light-txt;
   }
@@ -52,11 +92,7 @@
   }
 
   .genres {
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-    pointer-events: none;
+    @include center-content;
     color: $light-txt;
   }
 
@@ -91,7 +127,6 @@
   }
 }
 
-
 .status-select {
   .status__control {
     background-color: $light-bg;
@@ -120,7 +155,80 @@
   }
 
   .status__single-value {
+    @include center-content;
     color: $light-txt;
+  }
+}
+
+.sort-select,
+.genres-select,
+.status-select {
+  .sort__option,
+  .genres__option,
+  .status__option {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding-left: 15px !important;
+    font-size: 1rem !important;
+  }
+}
+
+.light-theme {
+  .sort-select,
+  .genres-select,
+  .status-select {
+    .sort__control,
+    .genres__control,
+    .status__control {
+      background-color: $light-filters-bg !important;
+    }
+
+    &.has-value {
+      .sort__control,
+      .genres__control,
+      .status__control {
+        border: 1px solid $dark-bg !important;
+        box-shadow: 0 0 10px $dark-bg !important;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .sort__menu,
+    .genres__menu,
+    .status__menu {
+      background-color: $light-filters-bg !important;
+    }
+
+    .sort__option,
+    .genres__option,
+    .status__option {
+      background-color: $light-filters-bg !important;
+      color: $light-txt !important;
+
+      &:hover {
+        background-color: darken($light-filters-bg, 10%) !important;
+      }
+
+      
+    }
+
+    .sort__placeholder,
+    .genres__placeholder,
+    .status__placeholder,
+    .sort__single-value,
+    .status__single-value,
+    .genres__multi-value,
+    .genres__multi-value__label {
+      color: $light-txt !important;
+    }
+
+    .genres {
+      color: $light-txt;
+    }
+
+    .sort__control::after {
+      color: $light-txt;
+    }
   }
 }
 
@@ -131,30 +239,35 @@
     .sort__control,
     .genres__control,
     .status__control {
-      background-color: $dark-bg !important;
+      background-color: $dark-filters-bg !important;
       border-color: lighten($dark-bg, 20%) !important;
+    }
+
+    &.has-value {
+      .sort__control,
+      .genres__control,
+      .status__control {
+        border: 1px solid $light-bg !important;
+        box-shadow: 0 0 1px $light-bg !important;
+        transition: all 0.3s ease;
+      }
     }
 
     .sort__menu,
     .genres__menu,
     .status__menu {
-      background-color: $dark-bg !important;
+      background-color: $dark-filters-bg !important;
+      border-color: $light-bg !important;
     }
 
     .sort__option,
     .genres__option,
     .status__option {
-      background-color: $dark-bg !important;
+      background-color: $dark-filters-bg !important;
       color: $dark-txt !important;
 
       &:hover {
-        background-color: lighten($dark-bg, 10%) !important;
-      }
-
-      &.sort__option--is-selected,
-      &.genres__option--is-selected,
-      &.status__option--is-selected {
-        background-color: lighten($dark-bg, 15%) !important;
+        background-color: darken($dark-filters-bg, 10%) !important;
       }
     }
 
@@ -171,67 +284,17 @@
     .genres {
       color: $dark-txt;
     }
-  }
-}
 
-
-.light-theme {
-  .sort-select,
-  .genres-select,
-  .status-select {
-    .sort__control,
-    .genres__control,
-    .status__control {
-      background-color: $light-bg !important;
-      border-color: darken($light-bg, 20%) !important;
-    }
-
-    .sort__menu,
-    .genres__menu,
-    .status__menu {
-      background-color: $light-bg !important;
-    }
-
-    .sort__option,
-    .genres__option,
-    .status__option {
-      background-color: $light-bg !important;
-      color: $light-txt !important;
-
-      &:hover {
-        background-color: darken($light-bg, 10%) !important;
-      }
-
-      &.sort__option--is-selected,
-      &.genres__option--is-selected,
-      &.status__option--is-selected {
-        background-color: darken($light-bg, 15%) !important;
-      }
-    }
-
-    .sort__placeholder,
-    .genres__placeholder,
-    .status__placeholder,
-    .sort__single-value,
-    .status__single-value,
-    .genres__multi-value,
-    .genres__multi-value__label {
-      color: $light-txt !important;
-    }
-
-    .genres {
-      color: $light-txt;
+    .sort__control::after {
+      color: $dark-txt;
     }
   }
 }
 
-
-.checkbox-option, 
+.checkbox-option,
 .radio-option {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  justify-content: flex-start !important;
+  padding-left: 15px !important;
 
   input[type="checkbox"],
   input[type="radio"] {
