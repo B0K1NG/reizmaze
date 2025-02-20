@@ -25,6 +25,20 @@ body.light-theme a {
   text-decoration: underline !important;
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar {
   padding: 1rem;
   display: flex;
@@ -475,4 +489,49 @@ body.light-theme a {
 .checkbox-option label,
 .radio-option label {
   margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.pagination .page-item {
+  margin: 15px 5px;
+  display: flex;
+  align-items: flex-end;
+}
+.pagination .page-item button {
+  background: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #D3D2D2;
+  border-radius: 15%;
+  background-color: #D3D2D2;
+  transition: all 0.3s ease;
+}
+.pagination .page-item button.active {
+  border: 1px solid #58B658 !important;
+  background-color: #58B658 !important;
+}
+.pagination .page-item button:hover {
+  background-color: #9fd59f;
+}
+
+.dark-theme .pagination .page-item button {
+  background-color: #2A2932;
+  border-color: #2A2932;
+  color: white;
+}
+.dark-theme .pagination .page-item button:hover {
+  background-color: #9fd59f;
 }/*# sourceMappingURL=style.css.map */
