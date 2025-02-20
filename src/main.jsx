@@ -2,27 +2,29 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import './styles/style.css'
+import './styles/style.css';
 
-import App from './App.jsx'
-import NotFoundPage from './components/NotFoundPage.jsx'
-import ShowDetail from './components/ShowDetail'
-import FavoritesPage from './components/FavoritesPage'
-import { FavoritesProvider } from './context/FavoritesContext'
+import App from './App.jsx';
+import NotFoundPage from './components/NotFoundPage.jsx';
+import ShowDetail from './components/ShowDetail';
+import FavoritesPage from './components/FavoritesPage';
+import Layout from './components/Layout.jsx';
+
+import { FavoritesProvider } from './context/FavoritesContext';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Layout><App /></Layout>,
     errorElement: <NotFoundPage />,
   },
   {
     path: '/show/:id',
-    element: <ShowDetail />,
+    element: <Layout><ShowDetail /></Layout>,
   },
   {
     path: '/favorites',
-    element: <FavoritesPage/>,
+    element: <Layout><FavoritesPage/></Layout>,
   },
 ])
 
