@@ -6,39 +6,48 @@ import { Link, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 import { useContext } from 'react';
 
-
 const NavBar = () => {
-
     const { theme, toggleTheme } = useContext(ThemeContext);
     const location = useLocation();
+
+    const handleNavigation = (e, path) => {
+        if (location.pathname === path) {
+            e.preventDefault();
+            window.location.reload();
+        }
+    };
 
     return (
         <>
             <nav className={`navbar ${theme}`}>
                 <div className="navbar__left">
-                    <Link to={'/'}>
+                    <Link to="/" onClick={(e) => handleNavigation(e, '/')}>
                         <img src={reizLogo} alt="React Logo" className='navbar__logo'/>
                     </Link>
                     <div 
                         className={`theme-slider ${theme === 'light-theme' ? 'light' : ''}`}
                         onClick={toggleTheme}
                     >   
-                        <span className="theme-slider__icon theme-slider__icon--moon"><img src={moonIcon} alt="Dark" /></span>
+                        <span className="theme-slider__icon theme-slider__icon--moon">
+                            <img src={moonIcon} alt="Dark" />
+                        </span>
                         <div className="theme-slider__button"></div>
-                        <span className="theme-slider__icon theme-slider__icon--sun"><img src={sunIcon} alt="Light" /></span>
-                        
-                        
+                        <span className="theme-slider__icon theme-slider__icon--sun">
+                            <img src={sunIcon} alt="Light" />
+                        </span>
                     </div>
                 </div>
+
                 <div className='navbar__right'>
                     <Link 
-                        to={'/'}
+                        to="/" 
                         className={location.pathname === '/' ? 'active' : ''}
+                        onClick={(e) => handleNavigation(e, '/')}
                     >
                         HOME
                     </Link>
                     <Link 
-                        to={'/favorites'}
+                        to="/favorites"
                         className={location.pathname === '/favorites' ? 'active' : ''}
                     >
                         FAVORITES
@@ -46,7 +55,7 @@ const NavBar = () => {
                 </div>
             </nav>
         </>
-    )
-}
+    );
+};
 
-export default NavBar
+export default NavBar;
