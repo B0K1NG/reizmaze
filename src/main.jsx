@@ -35,7 +35,6 @@ createRoot(document.getElementById('root')).render(
     <ThemeProvider>
       <FavoritesProvider>
         <RouterProvider router={router} />
-        <Footer />
       </FavoritesProvider>
     </ThemeProvider>
   </StrictMode>,
