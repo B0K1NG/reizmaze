@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Select, { components } from 'react-select';
 import { CheckboxOption, RadioOption } from './OptionComponents';
 
+const URL = import.meta.env.VITE_API_URL;
+
 const FilterSort = ({ setFilters, setSort }) => {
   const [genreOptions, setGenreOptions] = useState([]);
   const [selectedGenres, setSelectedGenres] = useState([]);
@@ -26,7 +28,7 @@ const FilterSort = ({ setFilters, setSort }) => {
   useEffect(() => {
     const fetchGenres = async () => {
       try {
-        const response = await fetch('https://api.tvmaze.com/shows');
+        const response = await fetch(`${URL}`);
         const data = await response.json();
         const allGenres = new Set();
         data.forEach(show =>
