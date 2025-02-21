@@ -4,10 +4,9 @@ import { FavoritesContext } from '../context/FavoritesContext';
 
 const FavoritesPage = () => {
     const { favorites } = useContext(FavoritesContext);
-
+// Make this one more interesting
     return (
         <div>
-            <h2>Favorites</h2>
             {favorites.length === 0 ? (
                 <p>No favorites yet</p>
             ) : (
