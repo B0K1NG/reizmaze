@@ -19,3 +19,8 @@
   text-align: center;
   pointer-events: none;
 }
+
+@mixin card-hover($border-color, $shadow) {
+  border: $border-color;
+  box-shadow: $shadow;
+}
