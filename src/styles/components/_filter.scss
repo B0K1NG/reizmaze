@@ -196,13 +196,13 @@
     .sort__menu,
     .genres__menu,
     .status__menu {
-      background-color: $light-filters-bg !important;
+      background-color: white !important;
     }
 
     .sort__option,
     .genres__option,
     .status__option {
-      background-color: $light-filters-bg !important;
+      background-color: white !important;
       color: $light-txt !important;
 
       &:hover {
