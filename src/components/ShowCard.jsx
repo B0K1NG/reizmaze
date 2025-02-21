@@ -1,3 +1,6 @@
+import unfavorite from '../assets/heart-outline.png';
+import favorite from '../assets/heart-favorite.png';
+
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FavoritesContext } from '../context/FavoritesContext';
@@ -35,7 +38,10 @@ const ShowCard = ({ show, onFavoriteChange }) => {
                 <div className="header">
                     <h3>{show.name}</h3>
                     <button onClick={toggleFavorite}>
-                        {isFavorited ? 'Unfavorite' : 'Add to Favorites'}
+                        {isFavorited ?
+                            <img src={favorite} alt="Unfavorite" className='favorite-icon'/> :
+                            <img src={unfavorite} alt="Unfavorite" className='favorite-icon'/>
+                        }
                     </button>
                 </div>
                 
