@@ -319,7 +319,7 @@ footer {
 .light-theme .status-select .sort__menu,
 .light-theme .status-select .genres__menu,
 .light-theme .status-select .status__menu {
-  background-color: #D3D3D3 !important;
+  background-color: white !important;
 }
 .light-theme .sort-select .sort__option,
 .light-theme .sort-select .genres__option,
@@ -330,7 +330,7 @@ footer {
 .light-theme .status-select .sort__option,
 .light-theme .status-select .genres__option,
 .light-theme .status-select .status__option {
-  background-color: #D3D3D3 !important;
+  background-color: white !important;
   color: #1C1B22 !important;
 }
 .light-theme .sort-select .sort__option:hover,
