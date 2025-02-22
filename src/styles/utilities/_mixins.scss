@@ -24,3 +24,13 @@
   border: $border-color;
   box-shadow: $shadow;
 }
+
+@mixin sticky-element($top: 0) {
+  position: sticky;
+  top: $top;
+}
+
+@mixin grid-gap($gap) {
+  display: grid;
+  gap: $gap;
+}
