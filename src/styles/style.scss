@@ -1,13 +1,11 @@
-// Base imports
 @import './base/base';
-
-// Component imports
 
 @import './components/navbar';
 @import './components/filter';
 @import './components/_pagination';
 @import './components/showCard';
+@import './components/showDetail';
 
-// Utilities imports
 @import './utilities/mixins';
 @import './utilities/variables';
+@import './utilities/media';
