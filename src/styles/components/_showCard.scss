@@ -57,6 +57,7 @@
     }
 
     .summary {
+        color: $summary-color-dark;
         flex: 1;
         overflow: hidden;
         margin-bottom: 1rem;
@@ -93,15 +94,11 @@
 
 .light-theme {
     .show-card {
-        @include show-card-styles($card-bg-light, $border-hover-light, $shadow-hover-light);
+        @include show-card-styles(#f0efef, $border-hover-light, $shadow-hover-light);
     }
 
     .header {
         color: $header-color-light !important;
-    }
-
-    .summary {
-        color: $summary-color-dark;
     }
 
     .footer {
