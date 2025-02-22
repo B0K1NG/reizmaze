@@ -1,33 +1,13 @@
-// Theme variables
 $dark-bg: #1C1B22;
 $dark-txt: #fff;
 $light-bg: #f0f0f0;
 $light-txt: #1C1B22;
-
 $logo-bg: #9C29F2;
 $light-filters-bg: #D3D3D3;
 $dark-filters-bg: #2B2A32;
-
-// Footer button colors
 $footer-bg: #58B658;
 $dark-pagination-btn-bg: #2A2932;
 $light-pagination-btn-bg: #D3D2D2;
-
-// Filtering variables
-$control-height: 40px;
-$border-radius: 50px;
-$menu-radius: 15px;
-$padding: 15px;
-$arrow-size: 0.8em;
-$transition-speed: 0.2s;
-
-// Theme slider variables
-$slider-width: 60px;
-$slider-height: 30px;
-$slider-padding: 3px;
-$slider-button-size: $slider-height - ($slider-padding * 2);
-
-// Card background colors
 $card-bg-dark: rgba(0, 0, 0, 0.05);
 $card-bg-light: rgba(255, 255, 255, 0.8);
 $border-hover-dark: 2px solid white;
@@ -38,3 +18,30 @@ $header-color-dark: #6e6e6e;
 $header-color-light: #464646;
 $summary-color-dark: rgb(121, 121, 121);
 $summary-color-light: rgb(255, 255, 255);
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+
+$font-size-sm: 0.8rem;
+$font-size-lg: 1.6rem;
+$control-height: 40px;
+$border-radius: 50px;
+$menu-radius: 15px;
+$padding: 15px;
+$arrow-size: 0.8em;
+
+$transition-default: 0.2s ease-in-out;
+$transition-speed: 0.2s;
+
+$slider-width: 60px;
+$slider-height: 30px;
+$slider-padding: 3px;
+$slider-button-size: $slider-height - ($slider-padding * 2);
+
+$max-container-width: 1200px;
+$image-width: 300px;
+$mobile-image-width: 400px;
