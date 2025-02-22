@@ -88,6 +88,31 @@
             gap: 1.5rem;
         }
     }
+
+    .not-found-page {
+        &__content {
+          h1 {
+            font-size: 2rem;
+          }
+      
+          p {
+            font-size: 1rem;
+            width: 80%;
+          }
+      
+          button {
+            width: 50%;
+            height: auto;
+            max-height: 100px;
+            font-size: 1rem;
+            padding: 0.3rem 1rem;
+          }
+        }
+      
+        &__image {
+          max-width: 300px;
+        }
+      }
 }
 
 @media (max-width: $breakpoint-mobile) {
@@ -231,6 +256,30 @@
             font-size: 0.9rem;
         }
     }
+
+    .not-found-page {
+        &__content {
+          h1 {
+            font-size: 1rem;
+          }
+      
+          p {
+            max-width: 300px;
+            font-size: 0.8rem;
+            width: 100%;
+          }
+      
+          button {
+            max-width: 150px;
+            max-height: 100px;
+            font-size: 0.6rem;
+          }
+        }
+      
+        &__image {
+          max-width: 120px;
+        }
+      }
 }
 
 @media (max-width: $breakpoint-small) {
@@ -293,4 +342,22 @@
             font-size: 0.85rem;
         }
     }
+
+    
+    .not-found-page {
+        &__content {
+            p {
+                min-width: 100px;
+            }
+        
+          button {
+            min-width: 100px;
+            width: 50%;
+          }
+        }
+      
+        &__image {
+          max-width: 150px;
+        }
+      }
 }
