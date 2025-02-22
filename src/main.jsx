@@ -9,7 +9,6 @@ import NotFoundPage from './components/NotFoundPage.jsx';
 import ShowDetail from './components/ShowDetail';
 import FavoritesPage from './components/FavoritesPage';
 import Layout from './components/Layout.jsx';
-import Footer from './components/Footer.jsx';
 
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { FavoritesProvider } from './context/FavoritesContext';
