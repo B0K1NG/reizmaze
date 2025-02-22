@@ -22,7 +22,7 @@ const NavBar = () => {
             <nav className={`navbar ${theme}`}>
                 <div className="navbar__left">
                     <Link to="/" onClick={(e) => handleNavigation(e, '/')}>
-                        <img src={reizLogo} alt="React Logo" className='navbar__logo'/>
+                        <img src={reizLogo} alt="Reiz Logo" className='navbar__logo'/>
                     </Link>
                     <div 
                         className={`theme-slider ${theme === 'light-theme' ? 'light' : ''}`}
