@@ -780,6 +780,52 @@ footer {
   position: relative;
 }
 
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.not-found-page__content {
+  text-align: left;
+  margin-right: 2rem;
+}
+.not-found-page__content h1 {
+  color: #1C1B22;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+.not-found-page__content p {
+  color: #1C1B22;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+.not-found-page__content button {
+  background-color: #464646;
+  color: #fff;
+  border: 1px solid #464646;
+  border-radius: 10rem;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.not-found-page__content button:hover {
+  background-color: #555555;
+}
+.not-found-page__image {
+  width: auto;
+  max-width: 600px;
+  height: auto;
+}
+
 @media (max-width: 1024px) {
   .show-detail__container {
     position: relative;
@@ -848,6 +894,23 @@ footer {
   }
   .navbar__right {
     gap: 1.5rem;
+  }
+  .not-found-page__content h1 {
+    font-size: 2rem;
+  }
+  .not-found-page__content p {
+    font-size: 1rem;
+    width: 80%;
+  }
+  .not-found-page__content button {
+    width: 50%;
+    height: auto;
+    max-height: 100px;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+  }
+  .not-found-page__image {
+    max-width: 300px;
   }
 }
 @media (max-width: 768px) {
@@ -973,6 +1036,22 @@ footer {
   .status-select .status__single-value {
     font-size: 0.9rem;
   }
+  .not-found-page__content h1 {
+    font-size: 1rem;
+  }
+  .not-found-page__content p {
+    max-width: 300px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  .not-found-page__content button {
+    max-width: 150px;
+    max-height: 100px;
+    font-size: 0.6rem;
+  }
+  .not-found-page__image {
+    max-width: 120px;
+  }
 }
 @media (max-width: 480px) {
   .navbar {
@@ -1035,5 +1114,15 @@ footer {
   .status-select .sort__single-value,
   .status-select .status__single-value {
     font-size: 0.85rem;
+  }
+  .not-found-page__content p {
+    min-width: 100px;
+  }
+  .not-found-page__content button {
+    min-width: 100px;
+    width: 50%;
+  }
+  .not-found-page__image {
+    max-width: 150px;
   }
 }/*# sourceMappingURL=style.css.map */
