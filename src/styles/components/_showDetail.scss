@@ -1,0 +1,98 @@
+.show-detail {
+    min-height: 100vh;
+    padding: $spacing-lg;
+    
+    &__container {
+        max-width: $max-container-width;
+        margin: 0 auto;
+        @include grid-gap($spacing-xl);
+        grid-template-columns: $image-width 1fr;
+    }
+
+    &__image-container {
+        @include sticky-element($spacing-lg);
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        box-shadow: $box-shadow;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-lg;
+        text-align: left;
+    }
+
+    &__header {
+        flex: 0;
+    }
+
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        margin: 0;
+        text-align: left;
+    }
+
+    &__favorite-btn {
+        background-color: transparent;
+        border: none;
+        color: #888;
+        cursor: pointer;
+        margin-bottom: 0.8rem;
+        font-weight: 500;
+        transition: color $transition-default;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        
+        &:hover {
+            color: $footer-bg;
+        }
+        
+        &.favorited {
+            color: $footer-bg;
+        }
+    }
+
+    &__summary {
+        color: $summary-color-dark;
+        font-size: $font-size-sm;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    &__info {
+        @include grid-gap(0.2rem);
+        width: 100%;
+        margin-top: auto;
+        text-align: left;
+        font-size: $font-size-sm;
+    }
+
+    &__info-item {
+        display: flex;
+        gap: 3px;
+        align-items: baseline;
+        text-align: left;
+    }
+
+    &__info-label {
+        color: $summary-color-dark;
+        text-align: left;
+    }
+
+    &__info-value {
+        color: $summary-color-dark;
+        text-align: left;
+    }
+
+    &__link {
+        color: $footer-bg !important;
+        text-decoration: underline !important;
+        position: relative;
+    }
+}
