@@ -1,0 +1,296 @@
+@media (max-width: $breakpoint-tablet) {
+    .show-detail {
+        &__container {
+            position: relative;
+        }
+
+        &__image-container {
+            @include sticky-element($spacing-lg);
+            height: fit-content;
+        }
+
+        &__content {
+            position: relative;
+            text-align: left;
+        }
+
+        &__info {
+            position: absolute;
+            left: -($image-width + $spacing-xl);
+            top: 100%;
+            width: $image-width;
+            margin-top: 1rem;
+        }
+    }
+
+    .show-list {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1rem;
+        padding: 0.75rem;
+    }
+
+    .show-card, .light-theme .show-card {
+        height: 200px;
+
+        img {
+            width: 130px;
+            height: 200px;
+        }
+
+        .content {
+            padding: 0.75rem;
+        }
+
+        .header {
+
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        .summary {
+            font-size: 0.8rem !important;
+        }
+
+        .footer {
+            .rating,
+            .genres {
+                font-size: 0.8rem !important;
+            }
+        }
+    }
+
+    .filter-sort {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+
+        > div {
+            width: 10%;
+        }
+
+        .sort-select {
+            min-width: 14em;
+            max-width: 20em;
+        }
+    }
+
+    .sort-select .sort__menu,
+    .genres-select .genres__menu,
+    .status-select .status__menu {
+        width: 100% !important;
+        min-width: none;
+    }
+
+    .navbar {
+        &__right {
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .show-detail {
+        padding: $spacing-sm;
+
+        &__container {
+            grid-template-columns: 1fr;
+            gap: $spacing-md;
+        }
+
+        &__image-container {
+            position: static;
+            max-width: $mobile-image-width;
+            margin: 0 auto;
+        }
+
+        &__content {
+            position: static;
+        }
+
+        &__info {
+            position: static;
+            margin: 0;
+        }
+
+        &__info-item {
+            flex-direction: column;
+            gap: $spacing-xs;
+        }
+
+        &__info-label {
+            min-width: auto;
+        }
+    }
+
+    .navbar {
+        padding: 0.75rem;
+
+        &__right {
+            gap: 2rem;
+        }
+
+        a {
+            font-size: 0.9rem;
+        }
+
+        &__logo {
+            height: 1.75rem;
+        }
+
+        .theme-slider {
+            width: calc($slider-width * 0.9);
+            height: calc($slider-height * 0.9);
+
+            &__button {
+                width: calc($slider-button-size * 0.9);
+                height: calc($slider-button-size * 0.9);
+            }
+
+            &__icon img {
+                width: 0.9rem;
+            }
+
+            &.light .theme-slider__button {
+                transform: translateX(calc($slider-width * 0.9 - $slider-button-size * 0.9 - ($slider-padding * -0.2)));
+            }
+        }
+    }
+
+    .show-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .show-card, .light-theme .show-card {
+        height: 180px;
+
+        img {
+            width: 120px;
+            height: 180px;
+        }
+
+        .content {
+            padding: 0.5rem;
+        }
+
+        .header {
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .summary {
+            font-size: 0.6rem !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer {
+            .rating,
+            .genres {
+                font-size: 0.5rem !important;
+            }
+        }
+    }
+
+    .filter-sort {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .sort-select {
+            min-width: 12em;
+            max-width: 12em;
+        }
+    }
+
+    .sort-select .sort__control,
+    .genres-select .genres__control,
+    .status-select .status__control {
+        min-height: 35px !important;
+        font-size: 0.9rem;
+    }
+
+    .sort-select,
+    .genres-select,
+    .status-select {
+        .sort__option,
+        .genres__option,
+        .status__option {
+            font-size: 0.9rem !important;
+            padding: 8px 15px !important;
+        }
+
+        .sort__placeholder,
+        .genres__placeholder,
+        .status__placeholder,
+        .sort__single-value,
+        .status__single-value {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .navbar {
+        padding: 0.5rem;
+
+        &__right {
+            gap: 1rem;
+        }
+
+        a {
+            font-size: 0.8rem;
+        }
+
+        &__logo {
+            height: 1.5rem;
+        }
+
+        .theme-slider {
+            width: calc($slider-width * 0.8);
+            height: calc($slider-height * 0.8);
+
+            &__button {
+                width: calc($slider-button-size * 0.8);
+                height: calc($slider-button-size * 0.8);
+            }
+
+            &__icon img {
+                width: 0.8rem;
+            }
+
+            &.light .theme-slider__button {
+                transform: translateX(calc($slider-width * 0.8 - $slider-button-size * 0.8 - ($slider-padding * -0.2)));
+            }
+        }
+    }
+
+    .sort-select .sort__control,
+    .genres-select .genres__control,
+    .status-select .status__control {
+        min-height: 32px !important;
+        font-size: 0.85rem;
+    }
+
+    .sort-select,
+    .genres-select,
+    .status-select {
+        .sort__option,
+        .genres__option,
+        .status__option {
+            font-size: 0.85rem !important;
+            padding: 6px 12px !important;
+        }
+
+        .sort__placeholder,
+        .genres__placeholder,
+        .status__placeholder,
+        .sort__single-value,
+        .status__single-value {
+            font-size: 0.85rem;
+        }
+    }
+}
