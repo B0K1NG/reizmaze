@@ -17,7 +17,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout><App /></Layout>,
-    errorElement: <NotFoundPage />,
   },
   {
     path: '/show/:id',
@@ -25,8 +24,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/favorites',
-    element: <Layout><FavoritesPage/></Layout>,
+    element: <Layout><FavoritesPage /></Layout>,
   },
+  {
+    path: '*',
+    element: <NotFoundPage />
+  }
 ])
 
 createRoot(document.getElementById('root')).render(
