@@ -6,12 +6,11 @@ import './styles/style.css';
 
 import App from './App.jsx';
 import NotFoundPage from './components/pages/NotFoundPage.jsx';
-import ShowDetail from './components/ShowDetail';
+import ShowDetail from './components/shows/ShowDetail.jsx';
 import FavoritesPage from './components/pages/FavoritesPage.jsx';
 import Layout from './components/layout/Layout.jsx';
-
 import { ThemeProvider } from './context/ThemeContext.jsx';
-import { FavoritesProvider } from './context/FavoritesContext';
+import { FavoritesProvider } from './context/FavoritesContext.jsx';
 
 const router = createBrowserRouter([
   {

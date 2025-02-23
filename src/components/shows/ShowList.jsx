@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ShowCard from './ShowCard';
 import Pagination from './Pagination';
-import ScrollToTop from './layout/ScrollToTop';
+import ScrollToTop from '../layout/ScrollToTop';
 
 const URL = import.meta.env.VITE_API_URL;
 

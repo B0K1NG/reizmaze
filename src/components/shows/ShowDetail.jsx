@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { FavoritesContext } from '../context/FavoritesContext';
+import { FavoritesContext } from '../../context/FavoritesContext';
 
 const URL = import.meta.env.VITE_API_URL;
 

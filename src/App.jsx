@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 
-import ShowList from './components/ShowList';
-import FilterSort from './components/FilterSort';
+import ShowList from './components/shows/ShowList';
+import FilterSort from './components/filters/FilterSort';
 
 
 function App() {

@@ -1,7 +1,7 @@
-import noFavorites from '../assets/no-favorites.png';
+import noFavorites from '../../assets/no-favorites.png';
 
 import React, { useContext } from "react";
-import ShowCard from './ShowCard';
+import ShowCard from '../shows/ShowCard';
 import { FavoritesContext } from '../../context/FavoritesContext';
 
 const FavoritesPage = () => {

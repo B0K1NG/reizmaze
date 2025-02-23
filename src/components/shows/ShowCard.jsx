@@ -1,9 +1,9 @@
-import unfavorite from '../assets/heart-outline.png';
-import favorite from '../assets/heart-favorite.png';
+import unfavorite from '../../assets/heart-outline.png';
+import favorite from '../../assets/heart-favorite.png';
 
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FavoritesContext } from '../context/FavoritesContext';
+import { FavoritesContext } from '../../context/FavoritesContext';
 
 const ShowCard = ({ show, onFavoriteChange }) => {
     const { addFavorite, removeFavorite, isFavorite } = useContext(FavoritesContext);
