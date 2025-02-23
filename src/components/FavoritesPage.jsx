@@ -1,14 +1,15 @@
+import noFavorites from '../assets/no-favorites.png';
+
 import React, { useContext } from "react";
 import ShowCard from './ShowCard';
 import { FavoritesContext } from '../context/FavoritesContext';
 
 const FavoritesPage = () => {
     const { favorites } = useContext(FavoritesContext);
-// Make this one more interesting
     return (
         <div>
             {favorites.length === 0 ? (
-                <p>No favorites yet</p>
+                <img src={noFavorites} alt="No Favorites" className="not-found-page__image" />
             ) : (
                 <div className='show-list'>
                     {favorites.map(show => (
