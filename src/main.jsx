@@ -5,10 +5,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './styles/style.css';
 
 import App from './App.jsx';
-import NotFoundPage from './components/NotFoundPage.jsx';
+import NotFoundPage from './components/pages/NotFoundPage.jsx';
 import ShowDetail from './components/ShowDetail';
-import FavoritesPage from './components/FavoritesPage';
-import Layout from './components/Layout.jsx';
+import FavoritesPage from './components/pages/FavoritesPage.jsx';
+import Layout from './components/layout/Layout.jsx';
 
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import { FavoritesProvider } from './context/FavoritesContext';
