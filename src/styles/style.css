@@ -824,6 +824,13 @@ footer {
   height: auto;
 }
 
+.favorites-page__image {
+  padding-top: 3rem;
+  max-width: 700px;
+  width: auto;
+  height: auto;
+}
+
 @media (max-width: 1024px) {
   .show-detail__container {
     position: relative;
@@ -1048,7 +1055,11 @@ footer {
     font-size: 0.6rem;
   }
   .not-found-page__image {
-    max-width: 120px;
+    max-width: 200px;
+  }
+  .favorites-page__image {
+    max-width: 300px;
+    padding-top: 10rem;
   }
 }
 @media (max-width: 480px) {
@@ -1121,6 +1132,6 @@ footer {
     width: 50%;
   }
   .not-found-page__image {
-    max-width: 150px;
+    max-width: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
