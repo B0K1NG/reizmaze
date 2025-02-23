@@ -16,13 +16,14 @@ A modern TV show database platform built with React and Vite, providing comprehe
 - **Dark/Light Mode** - Toggle between theme preferences
 - **Favorites System** - Save and track your favorite shows
 - **Rating Display** - Show ratings out of 10
-- **Advanced Filtering** - Filter shows by genre and status
+- **Advanced Filtering** - Filter shows by status, genre and status
 - **Show Details** - Comprehensive information including:
   - Air dates
   - Show status
   - Episode runtime
   - Genre classification
-  - Plot synopsis
+- **Custom 404 Page** - Not Found page featuring a unique design created in Figma.
+- **Custom No Favorites Page** - No Favorites page with a personalized design developed in Figma.
 - **Responsive Design** - Seamless experience across all devices
 
 ## 🛠️ Tech Stack
