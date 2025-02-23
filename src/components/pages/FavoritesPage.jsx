@@ -9,7 +9,7 @@ const FavoritesPage = () => {
     return (
         <div>
             {favorites.length === 0 ? (
-                <img src={noFavorites} alt="No Favorites" className="not-found-page__image" />
+                <img src={noFavorites} alt="No Favorites" className="favorites-page__image" />
             ) : (
                 <div className='show-list'>
                     {favorites.map(show => (
