@@ -28,4 +28,24 @@ const RadioOption = (props) => {
     );
 };
 
-export { CheckboxOption, RadioOption };
+const StatusSingleValue = ({ children, ...props }) => (
+    <components.SingleValue {...props}>
+        Status filter
+    </components.SingleValue>
+);
+
+const GenresControl = ({ children, ...props }) => (
+    <components.Control {...props}>
+        <span className='genres'>
+        Genres filter ({props.getValue().length})
+        </span>
+        {children}
+    </components.Control>
+) 
+
+const GenresMultiValue = () => null;
+const NoIndicator = () => null;
+const NoSeparator = () => null;
+const NoClear = () => null;
+
+export { CheckboxOption, RadioOption, StatusSingleValue, GenresControl, GenresMultiValue, NoIndicator, NoSeparator, NoClear };

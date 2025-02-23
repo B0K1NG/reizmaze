@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Select, { components } from 'react-select';
-import { CheckboxOption, RadioOption } from './OptionComponents';
+import Select from 'react-select';
+import { 
+  CheckboxOption, 
+  RadioOption,
+  StatusSingleValue,
+  GenresControl,
+  GenresMultiValue,
+  NoIndicator,
+  NoSeparator,
+  NoClear
+} from './OptionComponents';
 
 const URL = import.meta.env.VITE_API_URL;
 
@@ -57,7 +66,7 @@ const FilterSort = ({ setFilters, setSort }) => {
     } else if (selected?.value.includes('premiered')) {
       setSort({ field: 'premiered', order: selected.value.includes('asc') ? 'asc' : 'desc' });
     } else {
-      setSort({field: '', order: ''});
+      setSort({ field: '', order: '' });
     }
   };
 
@@ -68,27 +77,6 @@ const FilterSort = ({ setFilters, setSort }) => {
       status: selectedStatus.value,
     }));
   };
-
-  const StatusSingleValue = ({ children, ...props }) => (
-    <components.SingleValue {...props}>
-      Status filter
-    </components.SingleValue>
-  );
-
-  const GenresMultiValue = () => null;
-
-  const GenresControl = ({ children, ...props }) => (
-    <components.Control {...props}>
-      <span className='genres'>
-        Genres filter ({selectedGenres.length})
-      </span>
-      {children}
-    </components.Control>
-  );
-
-  const NoIndicator = () => null;
-  const NoSeparator = () => null;
-  const NoClear = () => null;
 
   return (
     <div className='filter-sort'>
@@ -133,7 +121,7 @@ const FilterSort = ({ setFilters, setSort }) => {
         options={statusOptions}
         value={selectedStatus}
         onChange={handleStatusChange}
-        components={{ 
+        components={{
           Option: RadioOption, 
           SingleValue: StatusSingleValue,
           DropdownIndicator: NoIndicator,
