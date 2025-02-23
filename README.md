@@ -5,6 +5,7 @@ A modern TV show database platform built with React and Vite, providing comprehe
 - [Main Page](https://ibb.co/GQXPKccb)
 - [Show Info](https://ibb.co/Nd95Y9gr)
 - [404 Page](https://ibb.co/DfY9k34F)
+- [No Favorites Added] (https://ibb.co/2pXgXtq)
 - [Responsiveness Showcase](https://ibb.co/PZSJ4XHr)
 
 - [Live Preview](https://reizmaze.netlify.app/)
